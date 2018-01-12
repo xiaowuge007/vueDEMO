@@ -1,5 +1,5 @@
 <template>
   <footer class="copy">
-    Copy &copy; FungLeo
+    Copy FungLeo
   </footer>
 </template>

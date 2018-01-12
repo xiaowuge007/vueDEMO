@@ -19,7 +19,10 @@
   import myHeader from '../components/header.vue'
   import myFooter from '../components/footer.vue'
   export default {
-    components: { myHeader,   myFooter },
+    components: {
+      myHeader,
+      myFooter
+    },
     data () {
       return {
         id: this.$route.params.id,

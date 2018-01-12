@@ -10,7 +10,6 @@
         <input type="password" v-model="password" class="form-control" placeholder="password" />
       </div>
       <div>
-        <button class="btn btn-success btn-log btn-block" @click="sub">登录</button>
       </div>
 
     </div>
@@ -18,23 +17,14 @@
 </template>
 <script>
   export default{
-    data(){
+    data () {
       return {
-        username:'',
-        password:''
+        username: '',
+        password: ''
       }
     },
-    created:function(){
+    created () {
 
-    },
-    methods:{
-      sub:function(){
-        if((this.username == 'admin') && (this.password == 'admin')){
-            alert('000')
-          this.$router.push('/index')
-          window.sessionStorage.setItem('session','admin')
-        }
-      }
     }
   }
 </script>
@@ -51,4 +41,4 @@
   }
 
 
-</style>
+</sty
