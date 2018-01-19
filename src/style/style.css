@@ -1,3 +1,23 @@
 body{
-  background:#4db3ff;
+  background: #33485c;
+}
+.leftContainer{
+  width:240px;
+  float:left;
+}
+.centerContainer{
+  margin-left:240px;
+  background-color: #eee;
+  padding-bottom: 20px;
+}
+.center-header{
+  padding: 0 20px;
+  background-color: #fff;
+  height:32px;
+}
+.center-content{
+  margin: 20px 15px;
+  padding:10px;
+  background-color: #fff;
+  min-height:500px;
 }

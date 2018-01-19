@@ -1,33 +1,33 @@
 <template>
   <div>
     <Header></Header>
-    <div class="article_list">
-      <a href="/detail">详情</a>
-      <span>{{list}}</span>
-      <!--<ul>
-        <li v-for="i in list">
-          <time v-text="$utils.goodTime(i.create_at)"></time>
-          <router-link :to="'/content/' + i.id">
-            {{ i.title }}
-          </router-link>
-        </li>
-      </ul>-->
+    <div class="articleContainer">
+      <div class="leftContainer">
+        <Left></Left>
+      </div>
+      <div class="centerContainer">
+        <div class="center-header">
+
+        </div>
+        <div class="center-content">
+          <router-view></router-view>
+        </div>
+      </div>
     </div>
-    <Footer></Footer>
   </div>
 </template>
 <script>
   import Header from '../components/header.vue'
-  import Footer from '../components/footer.vue'
+  import Left from '../components/left.vue'
   export default {
-    components: { Header, Footer },
+    components: { Header, Left },
     data () {
       return {
         list: '5555'
       }
     },
     created () {
-      console.log(this.$store)
+      console.log(this.$store.getters.token)
     },
     methods: {
       getData () {

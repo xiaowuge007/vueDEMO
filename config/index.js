@@ -11,10 +11,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api/v1/**': {
-        target: 'https://cnodejs.org', // 你接口的域名
+      '/api': {
+        target: 'https://sp0.baidu.com', // 你接口的域名
         secure: false,
-        changeOrigin: false,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
       }
     },
 

@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import './login.js'
 // 引用API文件
 import api from './api'
 // 将API方法绑定到全局

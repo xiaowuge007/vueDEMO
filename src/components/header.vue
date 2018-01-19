@@ -1,5 +1,12 @@
 <template>
   <header class="header">
-    <h1 class="logo">Vue Demo by FungLeo</h1>
+
   </header>
 </template>
+
+<style>
+  .header{
+    height: 50px;
+    background: #2a3b4c;
+  }
+</style>
