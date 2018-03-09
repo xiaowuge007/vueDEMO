@@ -5,7 +5,7 @@
         <router-link class="list-group-item" to="/index/operation">运维管理</router-link>
         <ul class="list-group">
           <li>
-            <a class="list-group-item item-two">page1</a>
+            <router-link class="list-group-item item-two" to="{path:'/index/operation/page1',query: { id: 123 }}">page1</router-link>
           </li>
           <li>
             <a class="list-group-item item-two">page2</a>

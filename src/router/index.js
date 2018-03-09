@@ -9,14 +9,15 @@ import Report from '@/page/report/index'
 import System from '@/page/system/index'
 import Other from '@/page/other'
 import Aa from '@/page/aa'
-
+import Page1 from '@/page/operation/page1'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      component: Index
+      component: Index,
+      redirect: '/index/operation'
     },
     {
       path: '/login',
@@ -38,6 +39,10 @@ export default new Router({
         {
           path: '/index/system',
           component: System
+        },
+        {
+          path: '/index/operation/page1',
+          component: Page1
         }
       ]
     },

@@ -1,9 +1,15 @@
 body{
   background: #33485c;
 }
+.articleContainer{
+  width:100%;
+  position: relative;
+}
 .leftContainer{
   width:240px;
-  float:left;
+  position:absolute;
+  top:0;
+  left:0;
 }
 .centerContainer{
   margin-left:240px;
@@ -20,4 +26,13 @@ body{
   padding:10px;
   background-color: #fff;
   min-height:500px;
+}
+.nav-box{
+  margin-bottom:10px;
+}
+.template-box{
+  padding:10px;
+}
+.table-box{
+  margin:20px 0;
 }

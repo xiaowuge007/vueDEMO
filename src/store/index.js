@@ -3,38 +3,36 @@
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
+import user from './modules/user'
+import role from './modules/role'
+import permission from './modules/permission'
+import getters from './getters'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  state: {
-    count: 0,
-    token: window.sessionStorage.getItem('token')
-  },
-  getters: {
-    count: (state) => {
-      return state.count
-    },
-    token: (state) => {
-      return state.token
-    }
+  modules: {
+    user,
+    role,
+    permission
   },
   mutations: {
-    SET_COUNT: (state, count) => {
-      state.count = count
-    },
-    SET_TOKEN: (state, token) => {
-      state.token = token
+    CLEAR_USERINFO: (state) => {
+      state.user.name = ''
+      state.user.token = null
+      state.role.role = []
+      state.permission.permission = []
     }
   },
   actions: {
-    changeCount: (context) => {
-      context.commit('SET_COUNT', 5)
-    },
-    getToken: (context, token) => {
-      context.commit('SET_TOKEN', token)
+    logOut: ({commit}) => {
+      return new Promise((resolve) => {
+        commit('CLEAR_USERINFO')
+        resolve()
+      })
     }
-  }
+  },
+  getters
 })
 
 export default store

@@ -16,6 +16,7 @@
   </div>
 </template>
 <script>
+  import Cookie from 'js-cookie'
   export default{
     data () {
       return {
@@ -29,7 +30,7 @@
     methods: {
       submit: function () {
         if (this.username === 'admin' && this.password === 'admin001') {
-          window.sessionStorage.setItem('token', this.username)
+          Cookie.set('token', this.username)
           this.$store.commit('SET_TOKEN', this.username)
           this.$router.push({path: '/'})
         } else {

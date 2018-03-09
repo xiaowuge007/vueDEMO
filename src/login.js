@@ -13,7 +13,18 @@ router.beforeEach((to, from, next) => {
       next({path: '/'})
       nprogress.done()
     } else {
-      next()
+      /**
+       * 拉取角色.
+       */
+      store.dispatch('getRoles').then(function () {
+        /**
+         * 拉取权限.
+         */
+        store.dispatch('getPermission').then(function () {
+          console.log(store.getters.role, store.getters.permission)
+          next()
+        })
+      })
     }
   } else {
     if (to.path === '/login') {

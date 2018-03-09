@@ -45,6 +45,7 @@ function apiAxios (method, url, params, success, failure) {
     withCredentials: false
   })
     .then(function (res) {
+      debugger
       if (res.data.success === true) {
         if (success) {
           success(res.data)
@@ -58,6 +59,7 @@ function apiAxios (method, url, params, success, failure) {
       }
     })
     .catch(function (err) {
+      debugger
       let res = err.response
       if (err) {
         window.alert('api error, HTTP CODE: ' + res.status)
